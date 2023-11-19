@@ -1,0 +1,257 @@
+body {
+background: linear-gradient(45deg, #10002b, #3c096c, #9d4edd, #e0aaff);
+	background-size: 1000% 1000%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}      /*задник*/
+.hide {
+display: none !important;
+}
+.container {
+width: 1140px;
+margin: 0 auto;
+}     /*глав блок страницы*/
+
+.header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+}
+
+.header__logo {
+font-size: 35px;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 10px;
+color: #0f0f0f;
+} /*слово визитка*/
+
+.header__menu {
+position: relative;
+}
+
+.header__menu .menu__btn {
+background: transparent;
+border: none;
+cursor: pointer;
+}
+
+.header__menu .menu__btn svg {
+width: 25px;
+height: 25px;
+}
+
+.header__menu .menu__list {
+margin: 0;
+padding: 10px 20px;
+list-style-type: none;
+border-radius: 4px;
+background: #e2e2e2;
+position: absolute;
+bottom: 0;
+right: 0;
+transform: translateY(100%);
+display: flex;
+flex-direction: column;
+gap: 10px;
+animation: menu-showing .3s;
+position: absolute;
+z-index: 1;
+}
+
+.header__menu .menu__link {
+font-size: 14px;
+line-height: 16px;
+color: #000;
+text-decoration: none;
+}
+
+@keyframes menu-showing {
+from {
+transform: translateY(95%);
+}    /*кнопошка*/
+}
+.info {
+font-size: 17px;
+line-height: 25px;
+background-color: #E0AAFF;
+width: 100%;
+border-radius: 20px;
+padding: 10px;
+opacity: 80%;
+display: flex;
+justify-items: space-between;
+flex-direction: column;
+gap: 10%;
+color: #10002B;
+position: relative;
+}   /*анимация верхнего меню*/
+
+.portfolio {
+text-shadow: 0 4px 4px rgb(90,30,70);
+border-radius: 10px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.portfolio__btn {
+border-radius: 20px;
+background-color: #9D4EDD;
+}
+
+
+.div_fullname {
+background-color: #9D4EDD;
+border-radius: 20px;
+display: flex;
+}
+
+.sport_achievements {
+display: flex;
+border-radius: 20px;
+flex-direction: column;
+}
+
+.div_sport {
+display: flex;
+border-radius: 20px;
+background-color: #C77DFF;
+}
+
+.labs {
+display: flex;
+border-radius: 20px;
+background-color: #9D4EDD;
+justify-items: space-between;
+flex-direction: column;
+padding: 15px;
+animation: .5s cool_anim;
+display: none;
+}   /*меня скринов*/
+
+@keyframes cool_anim {
+from {
+transform: translateX(95%);
+}}   /*анимация блока с лабами*/
+
+.lab {
+display: flex;
+flex-direction: column;
+}
+
+.image {
+width: fill;
+} /*отвечает за ширину изображения*/
+
+.btn-8 {
+  background-color: #3C096C;
+background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-8 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-8:before,
+.btn-8:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #c797eb;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+.btn-8:before{
+   height: 0%;
+   width: 2px;
+}
+.btn-8:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-8:hover:before {
+  height: 100%;
+}
+.btn-8:hover:after {
+  width: 100%;
+}
+.btn-8:hover{
+  background: #9D4EDD;
+}
+.btn-8 span:hover{
+  color: #10002B;
+}
+.btn-8 span:before,
+.btn-8 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #240046;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+.btn-8 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-8 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-8 span:hover:before {
+  height: 100%;
+}
+.btn-8 span:hover:after {
+  width: 100%;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #10002B;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  align: top;
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}   /*стиль кноПочки*/
